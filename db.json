@@ -1,0 +1,37 @@
+{
+  "users": [
+    {
+      "email": "leo@leo",
+      "password": "$2a$10$GOaE3m/po8RIo1M4uxec/eLg.aUK3GZv13/9AVnRt5CORac64Sd/C",
+      "username": "leo",
+      "coins": 100,
+      "id": 1
+    }
+  ],
+  "games": [
+    {
+      "id": 1,
+      "name": "Valorant",
+      "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nam, nisi, eligendi sapiente sed veritatis expedita molestias reiciendis fugiat, commodi rerum aspernatur? Ut voluptatibus, blanditiis magnam deserunt cupiditate repellat sequi necessitatibus! Lorem, ipsum dolor",
+      "image_url": "valorant.jpg"
+    },
+    {
+      "id": 2,
+      "name": "Rocket League",
+      "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nam, nisi, eligendi sapiente sed veritatis expedita molestias reiciendis fugiat, commodi rerum aspernatur? Ut voluptatibus, blanditiis magnam deserunt cupiditate repellat sequi necessitatibus! Lorem, ipsum dolor",
+      "image_url": "rocket-league.jpg"
+    },
+    {
+      "id": 3,
+      "name": "CS:GO",
+      "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nam, nisi, eligendi sapiente sed veritatis expedita molestias reiciendis fugiat, commodi rerum aspernatur? Ut voluptatibus, blanditiis magnam deserunt cupiditate repellat sequi necessitatibus! Lorem, ipsum dolor",
+      "image_url": "csgo.jpg"
+    },
+    {
+      "id": 4,
+      "name": "Rainbox Six Siege",
+      "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nam, nisi, eligendi sapiente sed veritatis expedita molestias reiciendis fugiat, commodi rerum aspernatur? Ut voluptatibus, blanditiis magnam deserunt cupiditate repellat sequi necessitatibus! Lorem, ipsum dolor",
+      "image_url": "rainbow-six.jpeg"
+    }
+  ]
+}
