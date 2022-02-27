@@ -1,10 +1,10 @@
 # ReadME lnstat
 
-# 🤌 - Projet LNSTAT
+# 🤑 - Projet LNSTAT
 
 Cette application React est un projet réalisé dans le cadre du cours ... où nous avons dû réalisé une application de paris sur des match esportif.
 
-# 🌟 - Utiliser le projet
+# 🐁 - Utiliser le projet
 
 Créer vous un compte sur le site et commencez à parier vos points pour être le plus grands des pronostiqueurs. 
 
