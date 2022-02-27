@@ -1,11 +1,15 @@
 import { useState } from "react"
+import { v4 as uuidv4 } from 'uuid';
+
 
 function Signup() {
     const [formData, setFormData] = useState({
+        id:uuidv4(),
         email: '', // required
         password: '', // required
         username: '', // optional
-        coins:100
+        coins:100,
+        avatar_url:"vitality.jpg"
     })
     const [error, setError] = useState({error:false, content:"This is an error!"});
 

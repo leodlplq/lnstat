@@ -6,7 +6,7 @@
       "username": "leo",
       "coins": 100,
       "id": 1,
-      "avatar_url":"vitality.jpg"
+      "avatar_url": "vitality.jpg"
     },
     {
       "email": "leo@lea",
@@ -14,7 +14,7 @@
       "username": "",
       "coins": 100,
       "id": 2,
-      "avatar_url":"vitality.jpg"
+      "avatar_url": "vitality.jpg"
     },
     {
       "email": "leo@la",
@@ -22,7 +22,7 @@
       "username": "",
       "coins": 100,
       "id": 3,
-      "avatar_url":"vitality.jpg"
+      "avatar_url": "vitality.jpg"
     },
     {
       "email": "leo@laa",
@@ -30,7 +30,7 @@
       "username": "s",
       "coins": 100,
       "id": 4,
-      "avatar_url":"vitality.jpg"
+      "avatar_url": "vitality.jpg"
     },
     {
       "email": "leo@delplanque.fr",
@@ -38,7 +38,23 @@
       "username": "psyshiikk",
       "coins": 100,
       "id": 5,
-      "avatar_url":"vitality.jpg"
+      "avatar_url": "vitality.jpg"
+    },
+    {
+      "email": "delplanqueleomail@gmail.com",
+      "password": "$2a$10$uwpXEYlZ2nAL6wge.h4TDumLVqGRLwhSuvxl5txy5fNig.XaLx6LS",
+      "id": "ea727964-87ca-4073-80d3-5ab245b5117e",
+      "username": "leodelplanque",
+      "coins": 100,
+      "avatar_url": "vitality.jpg"
+    },
+    {
+      "email": "azerty@azerty",
+      "password": "$2a$10$lKi.inq5LVfQwpd6D1G5EOmyMuPj1Ko9x0Nm8UWw2vi3cI/7u0Dn.",
+      "username": "leo",
+      "coins": 100,
+      "id": 6,
+      "avatar_url": "vitality.jpg"
     }
   ],
   "games": [

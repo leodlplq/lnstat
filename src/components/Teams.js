@@ -2,6 +2,7 @@ import React , {useState, useEffect} from "react";
 import TeamCard from "./team/TeamCard";
 
 const ORIGIN = `https://api.pandascore.co/`;
+const TOKEN = process.env.REACT_APP_PANDASCORE_TOKEN
 
 export default function Teams(){
 
@@ -11,7 +12,7 @@ export default function Teams(){
 
             async function getTeamsData(page, perPage){
                   var myHeaders = new Headers();
-                  myHeaders.append("Authorization", "Bearer lW0z9941sGd0RhjJrfE-l5ukgkcxiYSAqYneflYSPl63Pl-z-fs");
+                  myHeaders.append("Authorization", `Bearer ${TOKEN}`);
 
                   var requestOptions = {
                         method: 'GET',
