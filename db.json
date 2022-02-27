@@ -5,7 +5,40 @@
       "password": "$2a$10$GOaE3m/po8RIo1M4uxec/eLg.aUK3GZv13/9AVnRt5CORac64Sd/C",
       "username": "leo",
       "coins": 100,
-      "id": 1
+      "id": 1,
+      "avatar_url":"vitality.jpg"
+    },
+    {
+      "email": "leo@lea",
+      "password": "$2a$10$vaaryiXdRuaZMzwWlpDQqu6ovQ335enelNBQffie92.zmGdwqHPZO",
+      "username": "",
+      "coins": 100,
+      "id": 2,
+      "avatar_url":"vitality.jpg"
+    },
+    {
+      "email": "leo@la",
+      "password": "$2a$10$5G19nTSCovUFop0BKoKFKORMKhiexspMiVwpwQ92OtcHpc769EBWO",
+      "username": "",
+      "coins": 100,
+      "id": 3,
+      "avatar_url":"vitality.jpg"
+    },
+    {
+      "email": "leo@laa",
+      "password": "$2a$10$SvPh06c/ftloDFoOA1RcFOntqHxQ68c5gO/MhgT9YNZyVV5jN92Ea",
+      "username": "s",
+      "coins": 100,
+      "id": 4,
+      "avatar_url":"vitality.jpg"
+    },
+    {
+      "email": "leo@delplanque.fr",
+      "password": "$2a$10$NcTr6Ujbc2hiPbtOrJY0huCVBGJxkPrvGsPC7Sx/xErPltQbWZZIu",
+      "username": "psyshiikk",
+      "coins": 100,
+      "id": 5,
+      "avatar_url":"vitality.jpg"
     }
   ],
   "games": [

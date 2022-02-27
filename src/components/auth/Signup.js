@@ -7,6 +7,7 @@ function Signup() {
         username: '', // optional
         coins:100
     })
+    const [error, setError] = useState({error:false, content:"This is an error!"});
 
     function handleSubmit(e) {
         e.preventDefault()
@@ -15,11 +16,26 @@ function Signup() {
             headers: {'Content-Type' : 'application/json'},
             body: JSON.stringify(formData)
         })
-        .then(res => res.json())
-        .then(data => console.log(data))
+        .then(res => {
+            if(!res.ok) {
+                return res.text().then(text => { throw text })
+            }
+            else {
+               return res.json();
+            }
+        })
+        .then(data => console.log(data.user))
+        .catch(function(e) {
+            let message = e.split("");
+            message.pop()
+            message.shift()
+            message = message.join("")
+            setError({error:true, content:message})
+        })
     }
 
     function handleChange(e) {
+        setError(prevCurr => ({...prevCurr, error:false}))
         setFormData({...formData, [e.target.name] : e.target.value})
     }
 
@@ -29,7 +45,7 @@ function Signup() {
             <form className='login-form' onSubmit={e => handleSubmit(e)}>
                 <div className="form-element">
                     <label htmlFor="username-s">Nom d'utilisateur</label>
-                    <input className="input-form" id="username-s" type='text' placeholder='Username' value={formData.username} name='username' onChange={e => handleChange(e)} ></input>
+                    <input className="input-form" id="username-s" type='text' placeholder="Nom d'utilisateur" value={formData.username} name='username' onChange={e => handleChange(e)} ></input>
                 </div>
                 <div className="form-element">
                     <label htmlFor="mail-s">Adresse mail</label>
@@ -40,6 +56,7 @@ function Signup() {
                     <input className="input-form" id="password-s" type='text' placeholder='Password' value={formData.password} name='password' onChange={e => handleChange(e)} ></input>
                 </div>
                 <button className='login-btn' type='submit'>Sign Up</button>
+                {error.error && <span className="error">{error.content}</span>}
             </form>
         </div>
     )

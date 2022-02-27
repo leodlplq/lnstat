@@ -1,5 +1,4 @@
 import React, {useState, useEffect} from "react";
-import { createPortal } from "react-dom";
 import GameCard from "./game/GameCard";
 
 const ORIGIN = `${window.location.protocol}//${window.location.hostname}:3000`;
@@ -16,7 +15,6 @@ export default function Games(){
             }
 
             getGameData()
-            
       }, [])
 
 

@@ -1,17 +1,15 @@
-import React from "react";
-import Signup from "./auth/Signup";
-import Login from "./auth/Login";
+import React, {useState, useEffect} from "react";
 
-export default function User(){
+import Auth from "./auth/Auth";
+
+
+
+export default function User(props){
+      console.log(props.user);
 
       return (
             <div className="user">
-                  <div className="user-form-container">
-                        <Login />
-                        <div className="separator"></div>
-                        <Signup />
-                  </div>
-      
+                  {props.user.id == null ? <Auth setUserFunction={props.setUserFunction} /> : <h1>Salut {props.user.username}, ton mail est {props.user.email}</h1>}
             </div>
       )
 }

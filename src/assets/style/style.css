@@ -14,7 +14,12 @@ body{
 
 /* GENERAL PART */
 
-
+.btn{
+      padding: 10px;
+      border-radius: 3px;
+      border: none;
+      text-decoration: none;
+}
 /* APP PART */
 
 .lnstat-app{
@@ -62,20 +67,42 @@ header > ul{
 }
 
 .icon{
-      height: 75px;
+      height: 60px;
+}
+
+.user-icon{
+      border-radius: 500px;
+}
+
+header > div{
+      display: flex;
+      align-items: center;
+      gap: 20px;
+}
+
+.logout-btn{
+      background-color: rgb(243, 59, 59);
+      color: white;
+      cursor: pointer;
+      
+      transition: background-color 0.1s ease-in;
+}
+
+.logout-btn:hover{
+      background-color: rgb(163, 39, 39);
 }
 
 /** GAME PART **/
 
-/****** GAME CARD ******/
-
 .games{
       width: 80%;
       margin: 0 auto;
+      padding: 50px 0 100px 0;
 }
 
+/****** GAME CARD ******/
 .games > h1{
-      margin: 60px 0px;
+      margin-bottom:60px;
 }
 
 .game-card-container{
@@ -141,6 +168,7 @@ header > ul{
       width: 50%;
       align-items: center;
       gap: 20px;
+      position: relative;
 }
 
 .input-form{
@@ -156,7 +184,9 @@ header > ul{
       display: flex;
       flex-direction: column;
       width: 100%;
+      gap: 5px;
 }
+
 
 .login-btn{
       margin-top: 50px;
@@ -174,3 +204,51 @@ header > ul{
       height: 200px;
       background: #0D2F3E;
 }
+
+.error{
+      color: red;
+      font-size: 13px;
+      margin: 0;
+      
+}
+
+/** TEAM PART **/
+
+.teams{
+      margin: 0 auto;
+      width: 80%;
+      padding: 50px 0 100px 0;
+}
+
+.teams > h1{
+      margin-bottom:60px;
+}
+
+.team-container{
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      column-gap: 60px;
+      row-gap: 60px;
+}
+
+.team-card{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 25px;
+      font-size: 20px;
+      text-align: center;
+}
+
+.team-card > div{
+      width: 100%;
+      aspect-ratio: 1;
+      overflow: hidden;
+}
+
+.team-card > div > img{
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+}
+
