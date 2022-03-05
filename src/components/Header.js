@@ -6,7 +6,6 @@ import logo from '../assets/images/logo.png'
 import userIcon from '../assets/images/icons/user.png'
 
 export default function Header(props){
-      console.log("Header", props.user)
       function handleLogOut(){
             localStorage.setItem('userId', null)
             props.setUserFunction({id:null})
@@ -44,7 +43,6 @@ export default function Header(props){
                               <img src={props.user.id == null ? userIcon : require(`../assets/images/avatar/${props.user.avatar_url}`)} alt="Icon user" className="icon user-icon"/>
                         </Link>
                   </div>
-                  
             </header>
       )
 }

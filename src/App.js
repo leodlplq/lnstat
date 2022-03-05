@@ -10,6 +10,7 @@ import Home from "./components/Home";
 import Matches from "./components/Matches";
 import Bets from "./components/Bets";
 import Teams from "./components/Teams";
+import Team from "./components/team/Team"
 import Ranking from "./components/Ranking";
 import Games from "./components/Games";
 import User from "./components/User"
@@ -24,7 +25,6 @@ export default function App(){
             async function getUserData(id){
                   const res = await fetch(`${ORIGIN}/users/${id}`)
                   const data = await res.json()
-                  console.log(data)
                   setUser(data);
             }
 
@@ -46,7 +46,8 @@ export default function App(){
                         <Route path="/" element={<Home />} />
                         <Route path="/matches" element={<Matches />} />
                         <Route path="/bets" element={<Bets />} />
-                        <Route path="/teams" element={<Teams />} />
+                        <Route path="/teams" element={<Teams />}/>
+                        <Route path="/teams/:slug" element={<Team />} />
                         <Route path="/ranking" element={<Ranking />} />
                         <Route path="/games" element={<Games />} />
                         <Route path="/user" element={<User setUserFunction={setUser} user={user}/>} />

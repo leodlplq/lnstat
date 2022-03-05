@@ -20,6 +20,11 @@ body{
       border: none;
       text-decoration: none;
 }
+
+.link{
+      color: white;
+      text-decoration: none;
+}
 /* APP PART */
 
 .lnstat-app{
@@ -40,6 +45,7 @@ header{
       right: 0px;
       backdrop-filter: blur(2px);
       height: 100px;
+      z-index: 999;
 }
 
 header > ul{
@@ -220,8 +226,31 @@ header > div{
       padding: 50px 0 100px 0;
 }
 
-.teams > h1{
+.header-teams{
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+
+}
+
+.header-teams > h1{
       margin-bottom:60px;
+}
+
+.header-teams > form{
+      display: flex;
+      align-items: flex-start;
+      gap: 20px;
+}
+
+.icon-search{
+      height: 15px;
+}
+
+.search-btn{
+      display: flex;
+      align-items: center;
+      gap: 5px;
 }
 
 .team-container{
@@ -244,6 +273,7 @@ header > div{
       width: 100%;
       aspect-ratio: 1;
       overflow: hidden;
+      text-overflow: clip;
 }
 
 .team-card > div > img{
@@ -251,4 +281,118 @@ header > div{
       height: 100%;
       object-fit: contain;
 }
+
+/** UNIQUE TEAM PART **/
+.team-herobanner{
+      height: 100vh;
+      width: 100%;
+      background: aqua;
+      margin-top: -100px;
+      position: relative;
+      z-index: 0;
+}
+
+.team-background{
+      width: 100%;
+      height: 100%;
+      position: relative;
+}
+
+.team-background > img{
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+}
+
+.team-background > .overlay{
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0,0,0,0.5);
+      position: absolute;
+      top: 0;
+      left: 0;
+}
+
+.team-logo{
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%,-50%);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+}
+
+.team-logo > img{
+      width: 200px;
+}
+
+/** RANKING PART **/
+.ranking{
+      margin: 0 auto;
+      width: 80%;
+      padding: 50px 0 100px 0;
+}
+
+.ranking-container{
+      margin: 50px 0;
+}
+
+.ranking-top3{
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      width: 100%;
+}
+
+.ranking-places{
+      margin-top: 20px;
+      display: grid;
+      grid-template-columns: repeat(3,1fr);
+      gap: 20px;
+      width: 100%;
+}
+
+.card-rank{
+      width: 100%;
+      height: 75px;
+      display: flex;
+      border: 3px solid white;
+      justify-content: space-between;
+      align-items: center;
+      border-radius: 20px;
+      padding: 0 40px;
+      
+}
+
+.card-rank h1, .card-rank h2{
+      font-size: 16px;
+}
+
+.card-rank-t{
+      width: 100%;
+      height: 90px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-radius: 20px;
+      padding: 0 80px;
+
+}
+
+.gold{
+      border: 3px solid gold;
+}
+
+
+.silver{
+      border: 3px solid silver;
+}
+
+.bronze{
+      border: 3px solid rgb(221, 138, 60);
+}
+
+
 

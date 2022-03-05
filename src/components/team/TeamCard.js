@@ -1,15 +1,20 @@
 import React from "react";
+import { Link } from "react-router-dom"
 
 import logo from "../../assets/images/logo.png"
 
 export default function TeamCard(props){
 
+      
+
       return (
-            <div className="team-card">
-                  <div>
-                        <img src={props.imageUrl != null ? props.imageUrl : logo} alt={`Logo de ${props.name}`} />
+            <Link to={`/teams/${props.slugTeam}`} className="link">
+                  <div className="team-card">
+                        <div>
+                              <img src={props.imageUrl != null ? props.imageUrl : logo} alt={`Logo de ${props.name}`} />
+                        </div>
+                        <p className="team-name">{props.name}</p>
                   </div>
-                  <p className="team-name">{props.name}</p>
-            </div>
+            </Link>
       )
 }

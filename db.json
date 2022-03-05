@@ -4,31 +4,31 @@
       "email": "leo@leo",
       "password": "$2a$10$GOaE3m/po8RIo1M4uxec/eLg.aUK3GZv13/9AVnRt5CORac64Sd/C",
       "username": "leo",
-      "coins": 100,
+      "coins": 500,
       "id": 1,
       "avatar_url": "vitality.jpg"
     },
     {
       "email": "leo@lea",
       "password": "$2a$10$vaaryiXdRuaZMzwWlpDQqu6ovQ335enelNBQffie92.zmGdwqHPZO",
-      "username": "",
-      "coins": 100,
+      "username": "qedadadqsd",
+      "coins": 300,
       "id": 2,
       "avatar_url": "vitality.jpg"
     },
     {
       "email": "leo@la",
       "password": "$2a$10$5G19nTSCovUFop0BKoKFKORMKhiexspMiVwpwQ92OtcHpc769EBWO",
-      "username": "",
-      "coins": 100,
+      "username": "sdqsdqsdqsd",
+      "coins": 260,
       "id": 3,
       "avatar_url": "vitality.jpg"
     },
     {
       "email": "leo@laa",
       "password": "$2a$10$SvPh06c/ftloDFoOA1RcFOntqHxQ68c5gO/MhgT9YNZyVV5jN92Ea",
-      "username": "s",
-      "coins": 100,
+      "username": "sqsdqsdqdqdq",
+      "coins": 189,
       "id": 4,
       "avatar_url": "vitality.jpg"
     },
@@ -36,7 +36,7 @@
       "email": "leo@delplanque.fr",
       "password": "$2a$10$NcTr6Ujbc2hiPbtOrJY0huCVBGJxkPrvGsPC7Sx/xErPltQbWZZIu",
       "username": "psyshiikk",
-      "coins": 100,
+      "coins": 623,
       "id": 5,
       "avatar_url": "vitality.jpg"
     },
@@ -45,14 +45,14 @@
       "password": "$2a$10$uwpXEYlZ2nAL6wge.h4TDumLVqGRLwhSuvxl5txy5fNig.XaLx6LS",
       "id": "ea727964-87ca-4073-80d3-5ab245b5117e",
       "username": "leodelplanque",
-      "coins": 100,
+      "coins": 9841,
       "avatar_url": "vitality.jpg"
     },
     {
       "email": "azerty@azerty",
       "password": "$2a$10$lKi.inq5LVfQwpd6D1G5EOmyMuPj1Ko9x0Nm8UWw2vi3cI/7u0Dn.",
       "username": "leo",
-      "coins": 100,
+      "coins": 651,
       "id": 6,
       "avatar_url": "vitality.jpg"
     }
