@@ -48,11 +48,11 @@ export default function Ranking(){
                         
                         <div className="ranking-places">
                               {users.length <= 3 ? "Loading" : users.map((el, i)=>{
-                                    if(i > 3){
+                                    if(i >= 3){
                                           console.log(el)
                                           return (
                                                 <div className="card-rank" key={el.id}>
-                                                      <h2>{i}</h2>
+                                                      <h2>{i+1}</h2>
                                                       <h1>{el.username}</h1>
                                                       <h2>{el.coins}</h2>
                                                 </div>)

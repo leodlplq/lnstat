@@ -25,6 +25,7 @@ body{
       color: white;
       text-decoration: none;
 }
+
 /* APP PART */
 
 .lnstat-app{
@@ -393,6 +394,76 @@ header > div{
 .bronze{
       border: 3px solid rgb(221, 138, 60);
 }
+
+/** MATCHES PART **/
+
+.matches{
+      width: 80%;
+      margin: 0 auto;
+      margin-top: 50px;
+}
+
+.match-card{
+      width: 100%;
+      height: 125px;
+      border-radius: 36px;
+      border: 3px solid #FFFFFF;
+      display: grid;
+      grid-template-columns: 1fr 2px 2fr 2px 1fr;
+      grid-auto-rows: 125px;
+}
+
+.match-card > .left{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 5px;
+}
+
+.match-card > .center{
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      height: 100%;
+      gap: 50px;
+
+}
+
+.team-name-match{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+}
+
+.team-logo-match{
+      height: 100%;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+}
+
+.team-logo-match > img{
+      height: 80%;
+}
+
+.match-card > .right {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+}
+
+.match-card .separator{
+      width: 2px;
+      height: 50%;
+      background-color: rgba(255, 255, 255, 0.2);
+      margin: auto 0;
+}
+
+
+
 
 
 
