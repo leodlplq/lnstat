@@ -18,7 +18,7 @@ import User from "./components/User"
 const ORIGIN = `${window.location.protocol}//${window.location.hostname}:3000`;
 
 export default function App(){
-      const [user, setUser] = useState({id:null});
+      const [user, setUser] = useState({id:null, avatar_url:"vitality.jpg"});
 
       useEffect(() => {
 
@@ -28,8 +28,9 @@ export default function App(){
                   setUser(data);
             }
 
-            
-            if(localStorage.getItem("userId") != null){
+            let idLoc = localStorage.getItem("userId");
+            if(idLoc != null && idLoc !== "null"){
+                  console.log(localStorage.getItem("userId"))
                   getUserData(localStorage.getItem("userId"))
             } else {
                   console.log('not logged in')

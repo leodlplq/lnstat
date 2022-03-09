@@ -7,9 +7,29 @@ import Auth from "./auth/Auth";
 export default function User(props){
       console.log(props.user);
 
+      let jsx = (
+            <div className="user-container">
+                  <div className="user-infos">
+                        <img src={require(`../assets/images/avatar/${props.user.avatar_url}`)} alt="Avatar" className="user-avatar"/>
+                        <div className="user-name">
+                              <h1>{props.user.username}</h1>
+                              {/* <span>{props.user.firstname} {props.user.lastname}</span> */}
+                              <h3>Tu as {props.user.coins} coins !</h3>
+                        </div>
+                  </div>
+                  
+
+                  <div className="user-bets">
+                        <h1>Tes paris :</h1>
+                  </div>
+                  
+            </div>
+            
+      )
+
       return (
             <div className="user">
-                  {props.user.id == null ? <Auth setUserFunction={props.setUserFunction} /> : <h1>Salut {props.user.username}, ton mail est {props.user.email}</h1>}
+                  {props.user.id == null ? <Auth setUserFunction={props.setUserFunction} /> : jsx}
             </div>
       )
 }

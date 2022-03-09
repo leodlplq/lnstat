@@ -218,6 +218,27 @@ header > div{
       
 }
 
+/** USER PAGE PART **/
+
+.user-container{
+      width: 80%;
+      margin: 0 auto;
+}
+
+.user-infos{
+      display: flex;
+      gap: 32px;
+      margin: 32px 0;
+      align-items: center;
+
+}
+
+.user-avatar{
+      width: 200px;
+      aspect-ratio: 1;
+      border-radius: 500px;
+}
+
 /** TEAM PART **/
 
 .teams{
