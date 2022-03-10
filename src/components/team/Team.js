@@ -3,6 +3,7 @@ import { useState, useEffect } from "react";
 
 import logo from "../../assets/images/logo.png"
 import bg from "../../assets/images/background/background-team.png"
+import PlayerCard from "../player/PlayerCard";
 
 const ORIGIN = `https://api.pandascore.co/`;
 const TOKEN = process.env.REACT_APP_PANDASCORE_TOKEN
@@ -12,9 +13,13 @@ const TOKEN = process.env.REACT_APP_PANDASCORE_TOKEN
 export default function Team(){
       
       let { slug } = useParams();
-      const [team, setTeam] = useState({});
-
-      console.log(slug, team)
+      const [team, setTeam] = useState({
+            current_videogame: {
+                  slug:"loading"
+            },
+            players:[]
+            
+      });
 
       async function getTeamBySlug(slug){
 
@@ -33,6 +38,7 @@ export default function Team(){
                   .catch(error => console.log('error', error));
       }
 
+      console.log(team)
       useEffect(() => {
             console.log(TOKEN)
             getTeamBySlug(slug)
@@ -45,11 +51,26 @@ export default function Team(){
                               <img src={bg} alt="background"/>
                               <div className="overlay"></div>
                         </div>
-                        <div className="team-logo">
-                              <img src={team.image_url != null ? team.image_url : logo} alt="Logo de " />
+                        <div className="team-infos">
+                              <div className="team-logo">
+                                    <img src={team.image_url != null ? team.image_url : logo} alt="Logo de " />
+                                    <span>X</span>
+                                    <img src={require(`../../assets/images/games-logo/${team.current_videogame.slug}.png`)} alt="Logo de " />
+                                    
+                              </div>
                               <h1 className="team-name">{team.name}</h1>
                         </div>
+                        
                   </div>
+
+                  <div className="players-presentation">
+                        <h1>Players</h1>
+                        <div className="players-container">
+                              {team.players.length == 0 ? <span>No data for this team</span> : ""}
+                              {team.players.map(p=><PlayerCard key={p.id} name={p.name} firstname={p.first_name} lastname={p.last_name} age={p.age} img={p.image_url}/>)}
+                        </div>
+                  </div>
+                  
             </div>
       )
 }

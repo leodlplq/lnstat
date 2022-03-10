@@ -1,15 +1,15 @@
 {
   "users": [
     {
-      "email": "leo@leo",
+      "email": "louison@louison",
       "password": "$2a$10$GOaE3m/po8RIo1M4uxec/eLg.aUK3GZv13/9AVnRt5CORac64Sd/C",
-      "username": "leo",
+      "username": "louison",
       "coins": 500,
       "id": 1,
       "avatar_url": "vitality.jpg"
     },
     {
-      "email": "leo@lea",
+      "email": "louison@lea",
       "password": "$2a$10$vaaryiXdRuaZMzwWlpDQqu6ovQ335enelNBQffie92.zmGdwqHPZO",
       "username": "qedadadqsd",
       "coins": 300,
@@ -17,7 +17,7 @@
       "avatar_url": "vitality.jpg"
     },
     {
-      "email": "leo@la",
+      "email": "louison@la",
       "password": "$2a$10$5G19nTSCovUFop0BKoKFKORMKhiexspMiVwpwQ92OtcHpc769EBWO",
       "username": "sdqsdqsdqsd",
       "coins": 260,
@@ -25,7 +25,7 @@
       "avatar_url": "vitality.jpg"
     },
     {
-      "email": "leo@laa",
+      "email": "louison@laa",
       "password": "$2a$10$SvPh06c/ftloDFoOA1RcFOntqHxQ68c5gO/MhgT9YNZyVV5jN92Ea",
       "username": "sqsdqsdqdqdq",
       "coins": 189,
@@ -33,25 +33,25 @@
       "avatar_url": "vitality.jpg"
     },
     {
-      "email": "leo@delplanque.fr",
+      "email": "louison@clery.fr",
       "password": "$2a$10$NcTr6Ujbc2hiPbtOrJY0huCVBGJxkPrvGsPC7Sx/xErPltQbWZZIu",
-      "username": "psyshiikk",
+      "username": "zonzz",
       "coins": 623,
       "id": 5,
       "avatar_url": "vitality.jpg"
     },
     {
-      "email": "delplanqueleomail@gmail.com",
+      "email": "clerylouisonmail@gmail.com",
       "password": "$2a$10$uwpXEYlZ2nAL6wge.h4TDumLVqGRLwhSuvxl5txy5fNig.XaLx6LS",
       "id": "ea727964-87ca-4073-80d3-5ab245b5117e",
-      "username": "leodelplanque",
-      "coins": 1000,
+      "username": "louisonclery",
+      "coins": 9841,
       "avatar_url": "vitality.jpg"
     },
     {
       "email": "azerty@azerty",
       "password": "$2a$10$lKi.inq5LVfQwpd6D1G5EOmyMuPj1Ko9x0Nm8UWw2vi3cI/7u0Dn.",
-      "username": "leo",
+      "username": "louison",
       "coins": 651,
       "id": 6,
       "avatar_url": "vitality.jpg"
@@ -62,25 +62,29 @@
       "id": 1,
       "name": "Valorant",
       "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nam, nisi, eligendi sapiente sed veritatis expedita molestias reiciendis fugiat, commodi rerum aspernatur? Ut voluptatibus, blanditiis magnam deserunt cupiditate repellat sequi necessitatibus! Lorem, ipsum dolor",
-      "image_url": "valorant.jpg"
+      "image_url": "valorant.jpg",
+      "slug": "valorant"
     },
     {
       "id": 2,
       "name": "Rocket League",
       "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nam, nisi, eligendi sapiente sed veritatis expedita molestias reiciendis fugiat, commodi rerum aspernatur? Ut voluptatibus, blanditiis magnam deserunt cupiditate repellat sequi necessitatibus! Lorem, ipsum dolor",
-      "image_url": "rocket-league.jpg"
+      "image_url": "rocket-league.jpg",
+      "slug": "rl"
     },
     {
       "id": 3,
       "name": "CS:GO",
       "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nam, nisi, eligendi sapiente sed veritatis expedita molestias reiciendis fugiat, commodi rerum aspernatur? Ut voluptatibus, blanditiis magnam deserunt cupiditate repellat sequi necessitatibus! Lorem, ipsum dolor",
-      "image_url": "csgo.jpg"
+      "image_url": "csgo.jpg",
+      "slug": "cs-go"
     },
     {
       "id": 4,
       "name": "Rainbox Six Siege",
       "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nam, nisi, eligendi sapiente sed veritatis expedita molestias reiciendis fugiat, commodi rerum aspernatur? Ut voluptatibus, blanditiis magnam deserunt cupiditate repellat sequi necessitatibus! Lorem, ipsum dolor",
-      "image_url": "rainbow-six.jpeg"
+      "image_url": "rainbow-six.jpeg",
+      "slug": "r6-siege"
     }
   ]
 }

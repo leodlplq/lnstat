@@ -25,7 +25,6 @@ body{
       color: white;
       text-decoration: none;
 }
-
 /* APP PART */
 
 .lnstat-app{
@@ -219,47 +218,27 @@ header > div{
       
 }
 
-/** USER PAGE PART **/
+/** TEAMS, LEAGUES PART **/
 
-.user-container{
-      width: 80%;
-      margin: 0 auto;
-}
 
-.user-infos{
-      display: flex;
-      gap: 32px;
-      margin: 32px 0;
-      align-items: center;
-
-}
-
-.user-avatar{
-      width: 200px;
-      aspect-ratio: 1;
-      border-radius: 500px;
-}
-
-/** TEAM PART **/
-
-.teams{
+.teams, .leagues{
       margin: 0 auto;
       width: 80%;
       padding: 50px 0 100px 0;
 }
 
-.header-teams{
+.header-teams, .header-leagues{
       width: 100%;
       display: flex;
       justify-content: space-between;
 
 }
 
-.header-teams > h1{
+.header-teams > h1, .header-leagues > h1{
       margin-bottom:60px;
 }
 
-.header-teams > form{
+.header-teams > form, .header-leagues > form{
       display: flex;
       align-items: flex-start;
       gap: 20px;
@@ -275,11 +254,20 @@ header > div{
       gap: 5px;
 }
 
-.team-container{
+.team-container, .league-container{
       display: grid;
       grid-template-columns: repeat(5, 1fr);
       column-gap: 60px;
       row-gap: 60px;
+}
+
+.team-card, .league-card{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 25px;
+      font-size: 20px;
+      text-align: center;
 }
 
 .team-card{
@@ -291,21 +279,32 @@ header > div{
       text-align: center;
 }
 
-.team-card > div{
+
+.team-card > div, .league-card > div{
       width: 100%;
       aspect-ratio: 1;
       overflow: hidden;
       text-overflow: clip;
+      position: relative;
 }
 
-.team-card > div > img{
+.logo-team-game{
+      position: absolute;
+      width: 50px!important;
+      height: 50px!important;
+      bottom: 0;
+      right: 0;
+}
+
+.team-card > div > img, .league-card > div > img{
       width: 100%;
       height: 100%;
       object-fit: contain;
 }
 
-/** UNIQUE TEAM PART **/
-.team-herobanner{
+
+/** UNIQUE TEAM, GAME LEAGUE PART **/
+.team-herobanner, .league-herobanner{
       height: 100vh;
       width: 100%;
       background: aqua;
@@ -314,19 +313,19 @@ header > div{
       z-index: 0;
 }
 
-.team-background{
+.team-background, .league-background{
       width: 100%;
       height: 100%;
       position: relative;
 }
 
-.team-background > img{
+.team-background > img, .league-background > img{
       width: 100%;
       height: 100%;
       object-fit: cover;
 }
 
-.team-background > .overlay{
+.team-background > .overlay, .league-background > .overlay{
       width: 100%;
       height: 100%;
       background-color: rgba(0,0,0,0.5);
@@ -335,7 +334,7 @@ header > div{
       left: 0;
 }
 
-.team-logo{
+.team-infos{
       position: absolute;
       top: 50%;
       left: 50%;
@@ -346,8 +345,78 @@ header > div{
       gap: 20px;
 }
 
-.team-logo > img{
+.team-logo{
+      display: flex;
+      align-items: center;
+      gap: 20px;
+}
+
+.team-logo > span{
+      font-size: 24px;
+      font-weight: 800;
+}
+
+.league-logo{
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%,-50%);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+}
+
+.team-logo > img, .league-logo > img{
       width: 200px;
+}
+
+.players-presentation{
+      width: 80%;
+      margin: 0 auto;
+      padding: 50px 0;
+
+}
+
+.players-presentation > h1{
+      margin-bottom: 50px;
+}
+
+.players-container{
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 50px;
+}
+
+/** PLAYER CARD **/
+.player-card{
+      display: flex;
+      flex-direction: column;
+      border: 2px solid white;
+      width: 100%;
+      border-radius: 20px;
+      overflow: hidden;
+}
+
+.player-image{
+      width: 100%;
+      overflow: hidden;
+      border-bottom: 2px solid white;
+      height: 300px;
+      
+}
+
+.player-image > img{
+      width: 100%;
+      height: 100%;
+      object-position: top center;
+      object-fit: cover;
+}
+
+.player-info{
+      display: flex;
+      flex-direction: column;
+      padding: 20px;
 }
 
 /** RANKING PART **/
@@ -424,6 +493,33 @@ header > div{
       margin-top: 50px;
 }
 
+.btn-past{
+      background-color: rgb(236, 50, 44);
+      color :white;
+}
+
+.btn-current{
+      background-color: rgb(62, 170, 80);
+      color :white;
+}
+
+.btn-upcoming{
+      background-color: rgb(41, 123, 245);
+      color :white;
+}
+
+.match-choice{
+      display: flex;
+      width: 100%;
+      justify-content: space-between;
+      align-items: center;
+}
+
+.match-btn{
+      display: flex;
+      gap: 10px;
+}
+
 .match-card{
       width: 100%;
       height: 125px;
@@ -482,9 +578,3 @@ header > div{
       background-color: rgba(255, 255, 255, 0.2);
       margin: auto 0;
 }
-
-
-
-
-
-
