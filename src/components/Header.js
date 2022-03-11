@@ -35,6 +35,9 @@ export default function Header(props){
                         <li >
                               <Link className="menu-link" to="/games">Jeux</Link>
                         </li>
+                        <li >
+                              <Link className="menu-link" to="/leagues">Ligues</Link>
+                        </li>
                   </ul>
 
                   <div>
