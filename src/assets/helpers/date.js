@@ -9,4 +9,12 @@ function addHours(date, hours) {
     return date;
 }
 
-export {addDays, addHours}
+function turnTwoDigits(nb){
+    if(nb < 10){
+        return `0${nb}`
+    } else {
+        return nb
+    }
+}
+
+export {addDays, addHours, turnTwoDigits}

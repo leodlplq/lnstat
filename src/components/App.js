@@ -8,6 +8,7 @@ import {
 import Header from "./components/Header";
 import Home from "./components/Home";
 import Matches from "./components/Matches";
+import Match from "./components/match/Match.js"
 import Bets from "./components/Bets";
 import Teams from "./components/Teams";
 import Team from "./components/team/Team"
@@ -46,15 +47,16 @@ export default function App(){
                   <Header user={user} setUserFunction={setUser}/>
                   <Routes>
                         <Route path="/" element={<Home />} />
-                        <Route path="/matches" element={<Matches />} />
-                        <Route path="/bets" element={<Bets />} />
-                        <Route path="/teams" element={<Teams />}/>
-                        <Route path="/teams/:slug" element={<Team />} />
-                        <Route path="/ranking" element={<Ranking />} />
-                        <Route path="/games" element={<Games />} />
-                        <Route path="/user" element={<User setUserFunction={setUser} user={user}/>} />
-                        <Route path="/leagues" element ={<Leagues />}/>
-                        <Route path="/leagues/:slug" element ={<League />}/>
+                        <Route path="matches" element={<Matches />} />
+                        <Route path="matches/:slug" element={<Match />}/>
+                        <Route path="bets" element={<Bets />} />
+                        <Route path="teams" element={<Teams />}/>
+                        <Route path="teams/:slug" element={<Team />} />
+                        <Route path="ranking" element={<Ranking />} />
+                        <Route path="games" element={<Games />} />
+                        <Route path="user" element={<User setUserFunction={setUser} user={user}/>} />
+                        <Route path="leagues" element ={<Leagues />}/>
+                        <Route path="leagues/:slug" element ={<League />}/>
                   </Routes>
             </div>
       )
