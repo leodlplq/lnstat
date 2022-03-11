@@ -14,6 +14,9 @@ import Team from "./components/team/Team"
 import Ranking from "./components/Ranking";
 import Games from "./components/Games";
 import User from "./components/User"
+import Leagues from "./components/Leagues"
+import League from "./components/league/League"
+
 
 const ORIGIN = `${window.location.protocol}//${window.location.hostname}:3000`;
 
@@ -44,7 +47,7 @@ export default function App(){
                   
                   <Header user={user} setUserFunction={setUser}/>
                   <Routes>
-                        <Route path="/" element={<Home />} />
+                        <Route exact path="/" element={<Home />} />
                         <Route path="/matches" element={<Matches />} />
                         <Route path="/bets" element={<Bets />} />
                         <Route path="/teams" element={<Teams />}/>
@@ -52,6 +55,8 @@ export default function App(){
                         <Route path="/ranking" element={<Ranking />} />
                         <Route path="/games" element={<Games />} />
                         <Route path="/user" element={<User setUserFunction={setUser} user={user}/>} />
+                        <Route path="/leagues" element={<Leagues />} />
+                        <Route path="/leagues/:slug" element={<League />} />
                   </Routes>
             </div>
       )
