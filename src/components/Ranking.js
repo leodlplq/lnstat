@@ -24,6 +24,7 @@ export default function Ranking(){
                               {users.length < 1 ? "No data..." : (
                               <div className="card-rank-t gold">
                                     <h2>1</h2>
+                                    <img src={require(`../assets/images/avatar/${users[0].avatar_url}`)} alt="Avatar" className="icon user-icon"/>
                                     <h1>{users[0].username}</h1>
                                     <h2>{users[0].coins}</h2>
                               </div>)
@@ -32,6 +33,7 @@ export default function Ranking(){
                               {users.length < 2 ? "No data..." : (
                               <div className="card-rank-t silver">
                                     <h2>2</h2>
+                                    <img src={require(`../assets/images/avatar/${users[1].avatar_url}`)} alt="Avatar" className="icon user-icon"/>
                                     <h1>{users[1].username}</h1>
                                     <h2>{users[1].coins}</h2>
                               </div>)
@@ -40,6 +42,7 @@ export default function Ranking(){
                               {users.length < 3 ? "No data..." : (
                               <div className="card-rank-t card-rank-t bronze">
                                     <h2>3</h2>
+                                    <img src={require(`../assets/images/avatar/${users[2].avatar_url}`)} alt="Avatar" className="icon user-icon"/>
                                     <h1>{users[2].username}</h1>
                                     <h2>{users[2].coins}</h2>
                               </div>)
@@ -53,6 +56,7 @@ export default function Ranking(){
                                           return (
                                                 <div className="card-rank" key={el.id}>
                                                       <h2>{i+1}</h2>
+                                                      <img src={require(`../assets/images/avatar/${el.avatar_url}`)} alt="Avatar" className="icon user-icon"/>
                                                       <h1>{el.username}</h1>
                                                       <h2>{el.coins}</h2>
                                                 </div>)

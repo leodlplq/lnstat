@@ -17,10 +17,12 @@ export default function League(){
       let { bg } = useParams()
       const [leagues, setLeagues] = useState([])
       const [videogame, setVideogame] = useState([{image_url:"valorant.jpg"}])
+      const [formData, setFormData] = useState("")
 
-      console.log(leagues.length)
+      //console.log(slug)
+      //console.log(leagues)
 
-      async function getLeagueBySlug(slug){
+      async function getLeagueBySlug(page, perPage, slug){
 
             var myHeaders = new Headers();
             myHeaders.append("Authorization", `Bearer ${TOKEN}`);
@@ -32,6 +34,22 @@ export default function League(){
             };
 
             fetch(`${ORIGIN}videogames/${slug}/leagues`, requestOptions)
+                  .then(response => response.json())
+                  .then(result => setLeagues(result))
+                  .catch(error => console.log('error', error));
+      }
+
+      async function getSearchedLeaguesData(page, perPage, slug){
+            var myHeaders = new Headers();
+            myHeaders.append("Authorization", `Bearer ${TOKEN}`);
+
+            var requestOptions = {
+                  method: 'GET',
+                  headers: myHeaders,
+                  redirect: 'follow'
+            };
+
+            fetch(`${ORIGIN}videogames/${slug}/leagues?search[name]=${formData}&sort=&page=1&per_page=50`, requestOptions)
                   .then(response => response.json())
                   .then(result => setLeagues(result))
                   .catch(error => console.log('error', error));
@@ -54,12 +72,27 @@ export default function League(){
                   .catch(error => console.log('error', error));
       }
 
+      function handleSubmit(e) {
+            e.preventDefault()
+            getSearchedLeaguesData()
+      }
+
+      function handleChange(e) {
+            setFormData(e.target.value)
+      }
+
       useEffect(() => {
-            console.log(TOKEN)
-            getLeagueBySlug(slug)
-            getVideogame(slug)
-      }, []);
+
+            if(formData === ""){
+                  getLeagueBySlug(1,100, slug);
+            } else {
+                  getSearchedLeaguesData(1, 100, slug)
+            }
+            
+      }, [formData]);
       
+      console.log(videogame[0].slug)
+
       return (
             <div className="league-game">
                   <div className="league-herobanner">
@@ -68,11 +101,16 @@ export default function League(){
                               <div className="overlay"></div>
                         </div>
                         <div className="league-logo">
-                              <img src={leagues.image_url != null ? leagues.image_url : logo} alt="Logo de " />
-                              <h1 className="league-name">{leagues.name}</h1>
+                              <h1 className="league-name">{slug}</h1>
                         </div>
                   </div>
                   <div className="leagues">
+                        <div className="header-leagues">
+                              <h1 className="leagues-title">Les ligues de {slug}</h1>
+                              <form onSubmit={handleSubmit}>
+                                    <input type="text" className="input-form" placeholder="Search" onChange={handleChange}/>
+                              </form>
+                        </div>
                         <div className="league-container">
                               {leagues.length !== 0 ? leagues.map(el=><LeagueCard key={el.id} slugLeague={el.slug} name={el.name} imageUrl={el.image_url} leagueGame={el.videogame.name}/>) : "loading"}                      
                         </div>

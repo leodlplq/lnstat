@@ -1,8 +1,6 @@
 import React , {useState, useEffect} from "react";
 import LeagueCard from "./league/LeagueCard";
 
-//import iconSearch from "../assets/images/icons/search.png"
-
 const ORIGIN = `https://api.pandascore.co/`;
 const TOKEN = process.env.REACT_APP_PANDASCORE_TOKEN
 
