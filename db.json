@@ -6,7 +6,7 @@
       "username": "louison",
       "coins": 500,
       "id": 1,
-      "avatar_url": "vitality.jpg"
+      "avatar_url": "zonzz.png"
     },
     {
       "email": "louison@lea",
@@ -54,6 +54,14 @@
       "username": "louison",
       "coins": 651,
       "id": 6,
+      "avatar_url": "vitality.jpg"
+    },
+    {
+      "email": "zonzz@zonzz",
+      "password": "$2a$10$5oGQaVOyMoF9iQz7bmsKZObv7gnXs61rRw.EOiYE.B6E35N8nnZ6m",
+      "id": "8293e47b-1892-4e5a-b5b6-3de70897a2c0",
+      "username": "zonzz",
+      "coins": 100,
       "avatar_url": "vitality.jpg"
     }
   ],
