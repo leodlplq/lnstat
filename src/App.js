@@ -21,18 +21,23 @@ import League from "./components/league/League";
 const ORIGIN = `${window.location.protocol}//${window.location.hostname}:3000`;
 
 export default function App(){
-      const [user, setUser] = useState({id:null});
+      const [user, setUser] = useState({id:null, avatar_url:null});
+      console.log(user)
 
       useEffect(() => {
 
             async function getUserData(id){
                   const res = await fetch(`${ORIGIN}/users/${id}`)
                   const data = await res.json()
+                  delete data.password;
                   setUser(data);
+                  
             }
 
             
-            if(localStorage.getItem("userId") != null){
+
+            
+            if(localStorage.getItem("userId") != null && localStorage.getItem("userId") != "null"){
                   getUserData(localStorage.getItem("userId"))
             } else {
                   console.log('not logged in')
@@ -48,7 +53,7 @@ export default function App(){
                   <Routes>
                         <Route path="/" element={<Home />} />
                         <Route path="matches" element={<Matches />} />
-                        <Route path="matches/:slug" element={<Match />}/>
+                        <Route path="matches/:id" element={<Match setUserFunction={setUser} user={user}/>}/>
                         <Route path="bets" element={<Bets />} />
                         <Route path="teams" element={<Teams />}/>
                         <Route path="teams/:slug" element={<Team />} />

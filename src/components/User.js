@@ -6,8 +6,9 @@ import Auth from "./auth/Auth";
 
 export default function User(props){
       console.log(props.user);
-
+      
       let jsx = (
+            props.user.id != null ?(
             <div className="user-container">
                   <div className="user-infos">
                         <img src={require(`../assets/images/avatar/${props.user.avatar_url}`)} alt="Avatar" className="user-avatar"/>
@@ -23,13 +24,14 @@ export default function User(props){
                         <h1>Tes paris :</h1>
                   </div>
                   
-            </div>
+            </div>) : <Auth setUserFunction={props.setUserFunction}/>
             
       )
 
+
       return (
             <div className="user">
-                  {props.user.id == null ? <Auth setUserFunction={props.setUserFunction} /> : jsx}
+                  {jsx}
             </div>
       )
 }
