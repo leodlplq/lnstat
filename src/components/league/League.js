@@ -72,6 +72,7 @@ export default function League(){
                         </div>
                         <div className="league-infos">
                             <div className="league-logo">
+                                    <img src={require(`../../assets/images/games-logo/${slug}.png`)} alt="Valorant"/>
                                     <span>X</span>
                                     
                             </div>
