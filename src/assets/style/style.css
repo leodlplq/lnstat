@@ -660,3 +660,74 @@ header > div{
       background-color: rgb(62, 170, 80);
       color: white;
 }
+
+/** BET PART **/
+
+.bets{
+      width: 80%;
+      padding: 50px 0;
+      margin: 0 auto;
+}
+
+.btn-redirect{
+      background-color: white;
+      color: black;
+}
+
+.notconnected{
+      display: flex;
+      flex-direction: column;
+      gap: 50px;
+      width: 80%;
+      height: 100%;
+      justify-content: center;
+      align-items: center;
+      margin: 0 auto;
+}
+
+.bets-card{
+      display: flex;
+      flex-direction: column;
+      border: 2px solid white;
+      border-radius: 10px;
+      width: 100%;
+      
+}
+
+.teams-bets{
+      width: 100%;
+      display: flex;
+      gap: 20px;
+      padding: 10px;
+}
+
+.teams-bets > .team{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+}
+
+.teams-bets > .team > .team-logo{
+      height: 100px;
+      width: 100px;
+      overflow: hidden;
+}
+
+.teams-bets > .team > .team-logo > img{
+      object-fit: contain;
+      width: 100%;
+      height: 100%;
+}
+
+.bets-info{
+      padding: 10px;
+      border-top: 2px solid white;
+      display: flex;
+      flex-direction: column;
+}
+
+.bets-container{
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+}

@@ -12,6 +12,10 @@ export default function Teams(){
       const [teams, setTeams] = useState([]);
       const [formData, setFormData] = useState("")
       const [error, setError] = useState({error:false, content:"This is an error!"});
+      const [total, setTotal] = useState(0)
+      const [page, setPage] = useState(61)
+
+      console.log("nbPage",Math.ceil(total/100))
 
       async function getSearchedTeamsData(page, perPage){
             var myHeaders = new Headers();
@@ -24,7 +28,10 @@ export default function Teams(){
             };
 
             fetch(`${ORIGIN}teams?search[name]=${formData}&sort=&page=1&per_page=50`, requestOptions)
-                  .then(response => response.json())
+                  .then(response =>{
+                        console.log("header", response.getHeader("X-Total"))
+                        return response.json()
+                  } )
                   .then(result => setTeams(result))
                   .catch(error => console.log('error', error));
       }
@@ -40,7 +47,10 @@ export default function Teams(){
             };
 
             fetch(`${ORIGIN}teams?sort=id&page=${page}&per_page=${perPage}`, requestOptions)
-                  .then(response => response.json())
+                  .then(response =>{
+                        setTotal(parseInt(response.headers.get("X-Total")))
+                        return response.json()
+                  } )
                   .then(result => setTeams(result))
                   .catch(error => console.log('error', error));
       }
@@ -59,12 +69,12 @@ export default function Teams(){
       useEffect(() => {
 
             if(formData === ""){
-                  getTeamsData(1,100);
+                  getTeamsData(page,100);
             } else {
                   getSearchedTeamsData()
             }
             
-      }, [formData]);
+      }, [formData, page]);
 
       return (
             <div className="teams">

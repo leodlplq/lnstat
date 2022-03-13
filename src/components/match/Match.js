@@ -24,13 +24,14 @@ export default function Match(props){
      * 
      */
     let { id } = useParams()
-    const [match, setMatch] = useState({opponents:[]})
+    const [match, setMatch] = useState({opponents:[], results:[]})
     const [formData, setFormData] = useState(
         {amount1: 0, amount2: 0}
     )
     const [bets, setBets] = useState([])
+
    
-    console.log(bets)
+    console.log(match)
 
     function handleChange(event) {
         setFormData(prevFormData => {
@@ -77,7 +78,8 @@ export default function Match(props){
         };
 
         fetch(`${ORIGIN}matches/${id}`, requestOptions)
-            .then(response => response.json())
+            .then(response => {
+                return response.json()})
             .then(result => setMatch(result))
             .catch(error => console.log('error', error));
     } 
@@ -154,7 +156,7 @@ export default function Match(props){
                     </div>
                     <h2 className="team-name">{match.opponents.length == 0 ? "TBD" : match.opponents[0].opponent.name }</h2>
                     <div className="bets-stats"></div>
-                    <div className="match-bet">
+                    {match.status =="not_started" ? <div className="match-bet">
                         <input 
                             type="number" 
                             className="input-amount" 
@@ -165,7 +167,7 @@ export default function Match(props){
                             value={formData.amount1}
                             />
                         <button className="btn btn-bet-onmatch" onClick={()=>handleClickBet(1, match.opponents.length == 0 ? 0 : match.opponents[0].opponent.id)} disabled={match.opponents.length !== 2}>Miser</button>
-                    </div>
+                    </div> : <h2>{match.results.length != 0 ? match.results[0].score : 0}</h2> }
                    
                 </div>
                 
@@ -175,7 +177,7 @@ export default function Match(props){
                     </div>
                     <h2 className="team-name">{match.opponents.length <=1 ? "TBD" : match.opponents[1].opponent.name }</h2>
                     <div className="bets-stats"></div>
-                    <div className="match-bet">
+                    {match.status =="not_started" ? <div className="match-bet">
                         <input 
                             type="number" 
                             className="input-amount"
@@ -185,8 +187,8 @@ export default function Match(props){
                             disabled={match.opponents.length !== 2}
                             value={formData.amount2}
                             />
-                        <button className="btn btn-bet-onmatch" onClick={()=>handleClickBet(2, match.opponents.length == 0 ? 0 : match.opponents[0].opponent.id)}  disabled={match.opponents.length !== 2}>Miser</button>
-                    </div>
+                        <button className="btn btn-bet-onmatch" onClick={()=>handleClickBet(2, match.opponents.length == 0 ? 0 : match.opponents[1].opponent.id)}  disabled={match.opponents.length !== 2}>Miser</button>
+                    </div> : <h2>{match.results.length != 0 ? match.results[1].score : 0}</h2>}
                 </div>
             </div>
             

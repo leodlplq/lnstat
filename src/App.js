@@ -54,7 +54,7 @@ export default function App(){
                         <Route path="/" element={<Home />} />
                         <Route path="matches" element={<Matches />} />
                         <Route path="matches/:id" element={<Match setUserFunction={setUser} user={user}/>}/>
-                        <Route path="bets" element={<Bets />} />
+                        <Route path="bets" element={<Bets setUserFunction={setUser} user={user}/>} />
                         <Route path="teams" element={<Teams />}/>
                         <Route path="teams/:slug" element={<Team />} />
                         <Route path="ranking" element={<Ranking />} />
