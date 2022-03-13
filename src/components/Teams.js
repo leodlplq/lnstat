@@ -13,7 +13,7 @@ export default function Teams(){
       const [formData, setFormData] = useState("")
       const [error, setError] = useState({error:false, content:"This is an error!"});
       const [total, setTotal] = useState(0)
-      const [page, setPage] = useState(61)
+      const [page, setPage] = useState(1)
 
       console.log("nbPage",Math.ceil(total/100))
 
@@ -28,10 +28,7 @@ export default function Teams(){
             };
 
             fetch(`${ORIGIN}teams?search[name]=${formData}&sort=&page=1&per_page=50`, requestOptions)
-                  .then(response =>{
-                        console.log("header", response.getHeader("X-Total"))
-                        return response.json()
-                  } )
+                  .then(response =>response.json() )
                   .then(result => setTeams(result))
                   .catch(error => console.log('error', error));
       }

@@ -217,6 +217,22 @@ header > div{
       margin: 0;
       
 }
+
+.user-container{
+      width: 80%;
+      margin: 0 auto;
+}
+
+.user-infos{
+      width: 100%;
+      display: flex;
+      gap: 15px;
+      margin-top: 100px;
+}
+
+.user-avatar{
+      width: 150px;
+}
 /** HOME PART **/
 
 .home {
@@ -343,6 +359,8 @@ header > div{
 }
 
 
+
+
 /** UNIQUE TEAM, GAME LEAGUE PART **/
 .team-herobanner, .league-herobanner{
       height: 100vh;
@@ -405,6 +423,16 @@ header > div{
       flex-direction: column;
       align-items: center;
       gap: 20px;
+}
+
+.league-matches-container{
+      width: 80%;
+      margin: 0 auto;
+
+}
+
+.league-name{
+      margin: 50px 0;
 }
 
 .team-logo > img, .league-logo > img{

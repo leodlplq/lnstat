@@ -4,7 +4,7 @@
       "email": "louison@louison",
       "password": "$2a$10$GOaE3m/po8RIo1M4uxec/eLg.aUK3GZv13/9AVnRt5CORac64Sd/C",
       "username": "louison",
-      "coins": 500,
+      "coins": 100,
       "id": 1,
       "avatar_url": "zonzz.png"
     },
@@ -93,21 +93,21 @@
       "id": 2,
       "name": "Rocket League",
       "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nam, nisi, eligendi sapiente sed veritatis expedita molestias reiciendis fugiat, commodi rerum aspernatur? Ut voluptatibus, blanditiis magnam deserunt cupiditate repellat sequi necessitatibus! Lorem, ipsum dolor",
-      "image_url": "rocket-league.jpg",
+      "image_url": "rl.jpg",
       "slug": "rl"
     },
     {
       "id": 3,
       "name": "CS:GO",
       "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nam, nisi, eligendi sapiente sed veritatis expedita molestias reiciendis fugiat, commodi rerum aspernatur? Ut voluptatibus, blanditiis magnam deserunt cupiditate repellat sequi necessitatibus! Lorem, ipsum dolor",
-      "image_url": "csgo.jpg",
+      "image_url": "cs-go.jpg",
       "slug": "cs-go"
     },
     {
       "id": 4,
       "name": "Rainbox Six Siege",
       "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nam, nisi, eligendi sapiente sed veritatis expedita molestias reiciendis fugiat, commodi rerum aspernatur? Ut voluptatibus, blanditiis magnam deserunt cupiditate repellat sequi necessitatibus! Lorem, ipsum dolor",
-      "image_url": "rainbow-six.jpeg",
+      "image_url": "r6-siege.jpg",
       "slug": "r6-siege"
     }
   ],
@@ -977,6 +977,146 @@
       "win": true,
       "winner_id": 228,
       "id": 26
+    },
+    {
+      "user_id": 1,
+      "match_id": 625848,
+      "amount": 100,
+      "opponents": [
+        {
+          "opponent": {
+            "acronym": null,
+            "id": 129365,
+            "image_url": "https://cdn.pandascore.co/images/team/image/129365/t78932.png",
+            "location": "RO",
+            "modified_at": "2022-03-13T13:13:25Z",
+            "name": "OneTap",
+            "slug": "one-tap-gaming"
+          },
+          "type": "Team"
+        },
+        {
+          "opponent": {
+            "acronym": null,
+            "id": 129341,
+            "image_url": "https://cdn.pandascore.co/images/team/image/129341/42px_levadia.png",
+            "location": null,
+            "modified_at": "2022-03-13T13:13:25Z",
+            "name": "Levadia",
+            "slug": "levadia"
+          },
+          "type": "Team"
+        }
+      ],
+      "status": "not_finish",
+      "win": false,
+      "winner_id": 129341,
+      "id": 27
+    },
+    {
+      "user_id": 1,
+      "match_id": 625848,
+      "amount": 100,
+      "opponents": [
+        {
+          "opponent": {
+            "acronym": null,
+            "id": 129365,
+            "image_url": "https://cdn.pandascore.co/images/team/image/129365/t78932.png",
+            "location": "RO",
+            "modified_at": "2022-03-13T13:13:25Z",
+            "name": "OneTap",
+            "slug": "one-tap-gaming"
+          },
+          "type": "Team"
+        },
+        {
+          "opponent": {
+            "acronym": null,
+            "id": 129341,
+            "image_url": "https://cdn.pandascore.co/images/team/image/129341/42px_levadia.png",
+            "location": null,
+            "modified_at": "2022-03-13T13:13:25Z",
+            "name": "Levadia",
+            "slug": "levadia"
+          },
+          "type": "Team"
+        }
+      ],
+      "status": "not_finish",
+      "win": false,
+      "winner_id": 129365,
+      "id": 28
+    },
+    {
+      "user_id": 1,
+      "match_id": 625758,
+      "amount": 100,
+      "opponents": [
+        {
+          "opponent": {
+            "acronym": null,
+            "id": 3241,
+            "image_url": "https://cdn.pandascore.co/images/team/image/3241/RENEGADES.png",
+            "location": "US",
+            "modified_at": "2022-03-05T13:57:18Z",
+            "name": "Renegades",
+            "slug": "renegades-cs-go"
+          },
+          "type": "Team"
+        },
+        {
+          "opponent": {
+            "acronym": null,
+            "id": 129388,
+            "image_url": "https://cdn.pandascore.co/images/team/image/129388/105px_8_ballers_allmode.png",
+            "location": null,
+            "modified_at": "2022-03-10T11:03:08Z",
+            "name": "8Ballers",
+            "slug": "8ballers"
+          },
+          "type": "Team"
+        }
+      ],
+      "status": "not_finish",
+      "win": false,
+      "winner_id": 3241,
+      "id": 29
+    },
+    {
+      "user_id": 1,
+      "match_id": 625758,
+      "amount": 100,
+      "opponents": [
+        {
+          "opponent": {
+            "acronym": null,
+            "id": 3241,
+            "image_url": "https://cdn.pandascore.co/images/team/image/3241/RENEGADES.png",
+            "location": "US",
+            "modified_at": "2022-03-05T13:57:18Z",
+            "name": "Renegades",
+            "slug": "renegades-cs-go"
+          },
+          "type": "Team"
+        },
+        {
+          "opponent": {
+            "acronym": null,
+            "id": 129388,
+            "image_url": "https://cdn.pandascore.co/images/team/image/129388/105px_8_ballers_allmode.png",
+            "location": null,
+            "modified_at": "2022-03-10T11:03:08Z",
+            "name": "8Ballers",
+            "slug": "8ballers"
+          },
+          "type": "Team"
+        }
+      ],
+      "status": "not_finish",
+      "win": false,
+      "winner_id": 129388,
+      "id": 30
     }
   ]
 }

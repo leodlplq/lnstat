@@ -42,6 +42,7 @@ export default function Team(){
       useEffect(() => {
             console.log(TOKEN)
             getTeamBySlug(slug)
+            window.scrollTo(0, 0)
       }, []);
       
       return (

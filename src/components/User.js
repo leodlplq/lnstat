@@ -20,9 +20,9 @@ export default function User(props){
                   </div>
                   
 
-                  <div className="user-bets">
+                  {/* <div className="user-bets">
                         <h1>Tes paris :</h1>
-                  </div>
+                  </div> */}
                   
             </div>) : <Auth setUserFunction={props.setUserFunction}/>
             

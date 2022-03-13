@@ -155,7 +155,7 @@ export default function Bets(props){
             getBetsOfPlayer(idUser)
       }, [])
 
-      const jsx = bets.map(el=><BetCard key={el.id} opponents={el.opponents} status={el.status} winned={el.win} amount={el.amount}/>)
+      const jsx = bets.map(el=><BetCard key={el.id} opponents={el.opponents} status={el.status} winned={el.win} amount={el.amount} winner_id={el.winner_id}/>)
       
 
 
@@ -163,8 +163,7 @@ export default function Bets(props){
 
       return (
             <div className="bets">
-                  {props.user.id == null ? jsxNotConnected: <div className="bets-container">{jsx}</div>}
-                  
+                  {props.user.id == null ? jsxNotConnected : (bets.length == 0 ? <h1>Vous n'avez pas encore de pari ! Foncez !</h1>: <div className="bets-container">{jsx}</div>)}
             </div>
       )
 }

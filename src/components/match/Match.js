@@ -145,7 +145,7 @@ export default function Match(props){
     return (
         <div className="unique-match-container">
             <h1>{match.name} [BO{match.number_of_games}]</h1>
-            <h2>Il y a {bets.length} {bets.length == 1 ? 'pari':"paris"} sur ce match</h2>
+            <h2>Il y a {bets.length} {bets.length <= 1 ? 'pari':"paris"} sur ce match</h2>
             <div className="unique-match-teams">
                 
                 
